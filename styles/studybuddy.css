@@ -1,0 +1,94 @@
+header nav > img {
+    position: relative;
+
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    filter: brightness(.4);
+    background-color: black;
+}
+
+header nav section {
+    position: absolute;
+
+    top: -2em;
+    align-items: center;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 10em;
+    padding-top: 5em;
+}
+
+header nav section img:last-of-type {
+    width: 5em;
+    height: 3.5em;
+}
+
+header nav section a img:first-of-type {
+    width: 4em;
+    height: auto;
+
+    background-color: transparent;
+} 
+
+header nav h1 {
+    position: absolute;
+    width: 100vw;
+    padding: 0;
+    top: 4em;
+    left: 2.2em;
+}
+
+header nav h1 {
+    color: var(--color-background);
+    font-size: 5em;
+}
+
+/* ***********************************************************
+eerste section
+**************************************************************/
+
+main section:nth-of-type(1) {
+    display: flex;
+    justify-content: space-between;
+
+    margin-left: 11em;
+    margin-right: 11em;
+    margin-top: 2em;
+
+    padding: 2em;
+    padding-top: 1em;
+    background-color: white;
+    border-radius: .5em;
+}
+
+main section:nth-of-type(1) h2 {
+    margin:0;
+    font-weight: 800;
+    color: var(--color-header);
+}
+
+main section:nth-of-type(1) section:nth-of-type(1) {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+main section:nth-of-type(1) section:nth-of-type(1) h2 {
+    margin-bottom: 1em;
+}
+
+main section:nth-of-type(1) section:nth-of-type(2) {
+    display: inline-block;
+    margin: 0;
+    width: 48vw;
+    padding: 0;
+}
+
+main section:nth-of-type(1) section:nth-of-type(2) p {
+    line-height: 1.4em;
+    margin-top: 1em;
+}
+
