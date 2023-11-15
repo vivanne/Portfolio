@@ -30,9 +30,25 @@ section:nth-of-type(1) div img {
 section:nth-of-type(1) div {
     display: block;
     grid-column: 2;
+    opacity: 0;
+    transform: translateY(150px); 
+    transition: opacity 0.8s ease, transform 0.8s ease; 
+    animation: slideIn 1.5s forwards;
 
     margin: 0;
 }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 section:nth-of-type(1) h2 {
     grid-row: 2;
