@@ -260,6 +260,7 @@ section:nth-of-type(4) img {
     width: 76vw;
     height: 45em;
     object-fit: cover;
+    border-radius: .5em;
 }
 
 /* ******************** Responsive *********************** */
