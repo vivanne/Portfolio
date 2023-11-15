@@ -7,11 +7,13 @@ eerste section: introduction
 ************************************************************ */
  
 section:nth-of-type(1) {
-    display: grid;
     position: relative;
+
+    display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 5em;
     grid-template-rows: 40em;
+
     margin: 20em;
     margin-top: 10em;
     margin-bottom: 8em;
@@ -21,17 +23,20 @@ section:nth-of-type(1) {
 section:nth-of-type(1) div img {
     width: 5em;
     height:auto;
+
     margin-bottom: 2em;
 }
 
 section:nth-of-type(1) div {
     display: block;
     grid-column: 2;
+
     margin: 0;
 }
 
 section:nth-of-type(1) h2 {
     grid-row: 2;
+
     margin-top: 1.5em;
 }
 
@@ -39,12 +44,14 @@ section:nth-of-type(1) div p:nth-of-type(2) {
     font-size: large;
     font-weight: bold;
     color: var(--color-header);
+
     margin-top: 2em;
 }
 
 section:nth-of-type(1) ul {
     display: flex;
     list-style: none;
+
     padding-right: 0;
     margin-top: 2em;
 }
@@ -54,11 +61,10 @@ section:nth-of-type(1) ul li {
 }
 
 section:nth-of-type(1) a {
-    scroll-behavior: smooth;
-    font-size: .78em;
-
     display: inline-block;
+
     color: rgb(79, 79, 79);
+    font-size: .78em;
     border: solid .1em rgb(164, 164, 164);
     border-radius: 2em;
 
@@ -67,23 +73,25 @@ section:nth-of-type(1) a {
 }
 
 section:nth-of-type(1) a:hover {
-    color: #64b063;
-    border: solid .1em rgb(100, 176, 99);
+    color: var(--color-accent);
+    border: solid .1em var(--color-accent);
     transition: .3s;
 }
 
 section:nth-of-type(1) a:focus {
     color: #f0f2f0;
-    border: solid .1em rgb(100, 176, 99);
-    background-color: rgb(100, 176, 99);
+    border: solid .1em var(--color-accent);
+    background-color: var(--color-accent);
 }
 
 section:nth-of-type(1) img {
+    grid-column: 1;
+    grid-row: 1;
+    
     width: 30vw;
     height: 40em;
     object-fit: cover;
-    grid-column: 1;
-    grid-row: 1;
+
     border-radius: .5em;
 }
 
@@ -91,48 +99,54 @@ section:nth-of-type(1) img {
 
 @media screen and (max-width: 700px) {
     section:nth-of-type(1) {
-        grid-template-columns: 1fr; /* Change to a single column layout */
-        grid-template-rows: auto auto; /* Allow content to stack */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto; 
         column-gap: 0;
-        margin: 5%; /* Adjust margins as needed */
+
+        margin: 5%; 
         margin-top: 3em;
         margin-bottom: 3em;
     }
 
     section:nth-of-type(1) div {
-        grid-column: 1; /* Move the text content above the image */
-        order: 2; /* Change the order to place the div below the image */
+        grid-column: 1;
+        order: 2; 
         text-align: center;
+
         padding: 2em;
     }
 
     section:nth-of-type(1) img {
-        height: auto; /* Adjust height to fit content */
+        height: auto;
         width: 100%;
-        border-radius: 0; /* Remove border-radius for smaller screens */
-        margin-top: 2em; /* Add spacing between image and text */
-        order: 1; /* Change the order to place the image above the div */
+        border-radius: 0;
+        order: 1; 
+
+        margin-top: 2em; 
+
     }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1200px) {
     section:nth-of-type(1) {
-        grid-template-columns: 1fr; /* Change to a single column layout */
-        column-gap: 2em; /* Adjust the column gap as needed */
+        grid-template-columns: 1fr;
+        column-gap: 2em;
     }
 
     section:nth-of-type(1) div {
-        grid-column: 1; /* Move the text content above the image */
+        grid-column: 1;
         text-align: center;
+
         margin-left: -5em;
     }
 
     section:nth-of-type(1) img {
-        height: auto; /* Adjust height to fit content */
+        height: auto;
         width: 30em;
+
         margin-left: -3em;
-        border-radius: 0; /* Remove border-radius for smaller screens */
-        margin-top: -3em; /* Add spacing between image and text */
+        border-radius: 0;
+        margin-top: -3em;
     }
 }
 
@@ -141,8 +155,6 @@ tweede section: projects
 ************************************************************ */
 
 section:nth-of-type(2) {
-    /* margin-left: 15em;
-    margin-right: 15em; */
     margin-bottom: 7em;
     margin-top: 10em;
 }
@@ -151,18 +163,18 @@ section:nth-of-type(2) h2 {
     text-align: center;
     font-size: 1.5em;
     color: var(--color-header);
+
     margin-bottom: 2em;
 }
 
 section:nth-of-type(2) ul {
-    margin-left: 10em;
-    margin-right: 10em;
     display: flex;
     place-content: center;
     flex-flow: row wrap;
-    /* column-gap: .3em; */
-    /* justify-content: space-between; */
     list-style: none;
+
+    margin-left: 10em;
+    margin-right: 10em;
 }
 
 section:nth-of-type(2) ul li {
@@ -179,24 +191,27 @@ section:nth-of-type(2) ul li img {
 section:nth-of-type(2) ul li img:hover {
     width: 40em;
     height: 30em;
-    object-fit: scale-down;
 }
 
 section:nth-of-type(2) ul li section {
+    z-index: 2;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+
     display: flex;
     flex-direction: column;
-    padding-left: 2em;
-    padding-top: 2em;
-    margin: 0;
+
     width: 100%;
     height: 99%;
  
     opacity: 0;
     transition: .4s;
+
+
+    padding-left: 2em;
+    padding-top: 2em;
+    margin: 0;
 }
 
 section:nth-of-type(2) ul li section:hover {
@@ -205,13 +220,13 @@ section:nth-of-type(2) ul li section:hover {
 }
 
 section:nth-of-type(2) ul li section h3 {
-    color: #f0f2f0;
+    color: var(--color-background);
 }
 
 section:nth-of-type(2) ul li section h4 {
-    color: #f0f2f0;
+    color: var(--color-background);
 }
 
 section:nth-of-type(2) ul li section p {
-    color: #f0f2f0;
+    color: var(--color-background);
 }

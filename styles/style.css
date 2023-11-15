@@ -10,7 +10,7 @@
     --color-background:#f4f4f4;
     --color-header:#283618;
     --color-section:#D4D4D4;
-    --color-accent:#B7B7A4;
+    --color-accent:rgb(100, 176, 99);
     --color-text:rgb(65, 67, 66);
 }
 
@@ -36,6 +36,9 @@ FONTS
     src: url(../fonts/Montserrat/static/Montserrat-Bold.ttf);
 }
 
+.hidden {
+    display: none;
+}
 
 h1 {
     font-family: 'montserratBold';
@@ -63,7 +66,7 @@ h4 {
 
 p {
     font-size: 1em;
-    color:  rgb(94, 94, 94);
+    color: var(--color-text);
     font-family: "montserratLight";
     margin-top: .5em;
 }
@@ -73,35 +76,6 @@ a {
     text-decoration: none;
     color: rgb(31, 32, 32);
 }
-
-/* ***********************************************************
-HEADER
-**************************************************************/
-/* 
-header {
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
-    top: 0; 
-    align-items: center;
-    padding: 1.5em 5em;
-    z-index: 5;
-
-    background-color: var(--color-accent);
-}
-
-
-header > a img {
-    width: 5em;
-}
-
-header ul {
-    display: flex;
-    list-style: none;
-    gap: 5em;
-} */
-
-/* **********************************************************/
 
 /* ***********************************************************
 FOOTER
