@@ -199,8 +199,8 @@ section:nth-of-type(2) ul li {
 
 section:nth-of-type(2) ul li img {
     z-index: 100;
-    width: 28em;
-    height: 20em;
+    width: 30em;
+    height: 22em;
     object-fit: cover;
 }
 
